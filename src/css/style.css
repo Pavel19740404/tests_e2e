@@ -1,0 +1,18 @@
+body {
+    color: rgb(0, 0, 0);
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 490px;
+}
+
+.wrapper div {
+    height: 120px;
+    border: 1px solid #999;
+}
+
+.score {
+    font-size: 18px;
+}

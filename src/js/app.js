@@ -1,11 +1,7 @@
-// TODO: write code here
+import GamePlay from "./GamePlay";
+import GameController from "./GameController";
 
-// comment this to pass build
-const unusedVariable = "variable";
+const gamePlay = new GamePlay();
+const gameCtrl = new GameController(gamePlay);
 
-// for demonstration purpose only
-export default function demo(value) {
-  return `Demo: ${value}`;
-}
-
-console.log("app.js included");
+gameCtrl.init();

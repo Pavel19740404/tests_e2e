@@ -5,7 +5,9 @@ import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended"
 
 export default [
   {
-    languageOptions: { globals: { ...globals.browser, ...globals.node } },
+    languageOptions: {
+      globals: { ...globals.browser, ...globals.node },
+    },
   },
   pluginJs.configs.recommended,
   eslintPluginPrettierRecommended,
@@ -13,9 +15,7 @@ export default [
     rules: {
       "no-unused-vars": "warn",
     },
-  },
-  {
-    ignores: ["dist/*"],
+    ignores: ["dist/**/*"], // Игнорируем все файлы в папке dist
   },
   {
     files: ["**/*.test.js"],
@@ -23,6 +23,13 @@ export default [
     rules: {
       ...jest.configs["flat/recommended"].rules,
       "jest/prefer-expect-assertions": "off",
+    },
+  },
+  {
+    files: ["dist/**/*.js"],
+    rules: {
+      "no-unused-vars": "off",
+      "no-useless-escape": "off", // Отключаем правило no-useless-escape для файлов в dist
     },
   },
 ];

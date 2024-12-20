@@ -1,8 +1,13 @@
 const path = require("path");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const LicenseWebpackPlugin =
+  require("license-webpack-plugin").LicenseWebpackPlugin;
 
 module.exports = {
+  devServer: {
+    port: 8080,
+  },
   target: "web",
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -43,6 +48,13 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: "[name].css",
       chunkFilename: "[id].css",
+    }),
+    new LicenseWebpackPlugin({
+      pattern: /LICENSE.txt/,
+      perChunkOutput: false,
+      outputFilename: "licenses.txt",
+      suppressErrors: true,
+      includePackagesWithoutLicense: true,
     }),
   ],
 };

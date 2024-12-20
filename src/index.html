@@ -1,21 +1,39 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-   <title>AHJ_event</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
 <body>
-  <h1>AHJ_event</h1>
-  <h2>Goblin</h2>
-  <div class="menu">
-    <button type="button" class="start">Start</button>
-    <p>Score: <span class="hits"></span></p>
-    <p>Passes left: <span class="skip"></span></p>
+
+  <div class="container">
+
+      <div class="cards">
+        <div class="card visa"></div>
+        <div class="card master-card"></div>
+        <div class="card mir"></div>
+        <div class="card american"></div>
+        <div class="card discover"></div>
+        <div class="card jcb"></div>
+        <div class="card diners"></div>
+      </div>
+
+      <div class="field">
+        <input type="text" placeholder="Credit card number" class="input-field" pattern="[0-9]*"/>
+        <button type="submit" class="btn">Click to validate</button>
+      </div>
+
+      <div class="answer">
+        <div class="success icon icon-check">
+          <span>Карта действительна</span>
+        </div>
+        <div class="failure icon icon-cancel">
+          <span>Неверный номер карты</span>
+        </div>
+      </div>
+
   </div>
-  <div class="game-board">
-    <div class="game-message hidden">End Game</div>
-  </div>
+
 </body>
 </html>

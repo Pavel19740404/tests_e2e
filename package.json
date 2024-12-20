@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "description": "[Руководство по настройке Webpack](https://webpack.js.org/guides/)\r [Руководство по настройке GitHub Actions](https://docs.github.com/en/actions/quickstart)",
   "main": "index.js",
-   "repository": "git@github.com:Pavel19740404/events_2.git"
   "scripts": {
     "start": "webpack serve --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
     "lint": "eslint . --fix",
-    "test": "jest",
+    "e2e": "jest --testPathPattern=./e2e/ -- runInBand",
+    "test": "jest --testPathPattern=./src/",
     "coverage": "jest --coverage",
     "preshow:coverage": "npm run coverage",
     "show:coverage": "live-server coverage/lcov-report",

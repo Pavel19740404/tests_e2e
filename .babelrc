@@ -7,5 +7,19 @@
         "corejs": 3
       }
     ]
-  ]
+  ],
+  "env": {
+    "tests": {
+      "presets": [
+        [
+          "@babel/preset-env",
+          {
+            "targets": {
+              "node": "current"
+            }
+          }
+        ]
+      ]
+    }
+  }
 }

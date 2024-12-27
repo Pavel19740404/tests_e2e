@@ -1,4 +1,4 @@
-import "./css/style.css";
+import "./crs/style.css";
 
 import "./js/app";
 

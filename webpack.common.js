@@ -5,9 +5,7 @@ const LicenseWebpackPlugin =
   require("license-webpack-plugin").LicenseWebpackPlugin;
 
 module.exports = {
-  devServer: {
-    port: 8080,
-  },
+
   target: "web",
   output: {
     path: path.resolve(__dirname, "dist"),
